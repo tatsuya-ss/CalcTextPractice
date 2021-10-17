@@ -34,6 +34,14 @@ final class Calculator {
     func division(x: Int, y: Int) -> Int {
         return x / y
     }
+    
+    func safeDivision(x: Int, y: Int) -> Int? {
+        if y == 0 {
+            return nil
+        } else {
+            return x / y
+        }
+    }
 
 }
 

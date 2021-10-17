@@ -33,6 +33,11 @@ final class CalcTextPracticeTests: XCTestCase {
         XCTAssertEqual(calculator.division(x: 6, y: 2), 3)
     }
     
+    func testSafeDivition() {
+        XCTAssertEqual(calculator.safeDivision(x: 4, y: 2), 2)
+        XCTAssertNil(calculator.safeDivision(x: 4, y: 0))
+    }
+    
     func testCatRef() {
         let cat1 = Cat()
         let cat2 = cat1
