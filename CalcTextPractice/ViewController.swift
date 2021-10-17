@@ -7,13 +7,32 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+final class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+
     }
 
 
 }
 
+final class Calculator {
+
+    func add(x: Int, y: Int) -> Int {
+        return x + y
+    }
+
+    func subtract(x: Int, y: Int) -> Int {
+        return x - y
+    }
+
+    func multiple(x: Int, y: Int) -> Int {
+        return x * y
+    }
+
+    func division(x: Int, y: Int) -> Int {
+        return x / y
+    }
+
+}

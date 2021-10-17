@@ -10,24 +10,30 @@ import XCTest
 
 class CalcTextPracticeTests: XCTestCase {
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    func testAdd() {
+        let calculator = Calculator()
+        let result = calculator.add(x: 1, y: 2)
+        XCTAssertEqual(result, 3)
     }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    
+    func testSubtract() {
+        let calculator = Calculator()
+        XCTAssertEqual(calculator.subtract(x: 3, y: 1), 2)
     }
-
+    
+    func testMultiple() {
+        let calculator = Calculator()
+        XCTAssertEqual(calculator.multiple(x: 2, y: 3), 6)
+    }
+    
+    func testDivisin() {
+        let calculator = Calculator()
+        XCTAssertEqual(calculator.division(x: 6, y: 2), 3)
+    }
+    
     func testExample() throws {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-
+    
 }
