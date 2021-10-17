@@ -36,3 +36,11 @@ final class Calculator {
     }
 
 }
+
+final class Cat: Equatable {
+    var name = "たま"
+    static func == (lhs: Cat, rhs: Cat) -> Bool {
+        return lhs.name == rhs.name
+    }
+}
+
