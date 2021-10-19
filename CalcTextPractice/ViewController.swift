@@ -52,3 +52,14 @@ final class Cat: Equatable {
     }
 }
 
+final class Async {
+    
+    func echo(message: String,
+              handler: @escaping ((String) -> Void)) {
+        Thread.sleep(forTimeInterval: 3)
+        DispatchQueue.main.async {
+            handler("\(message)!!!")
+        }
+    }
+    
+}

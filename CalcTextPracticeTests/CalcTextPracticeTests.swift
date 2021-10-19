@@ -47,4 +47,36 @@ final class CalcTextPracticeTests: XCTestCase {
         XCTAssertFalse(cat1 === cat3)
     }
     
+    func testSafeDivisionRunActivity() {
+        
+        XCTContext.runActivity(named: "通常の割り算") { _ in
+            XCTAssertEqual(calculator.safeDivision(x: 6, y: 3), 2)
+            XCTAssertEqual(calculator.safeDivision(x: 6, y: 2), 3)
+        }
+        
+        XCTContext.runActivity(named: "0除算") { _ in
+            XCTAssertNil(calculator.safeDivision(x: 4, y: 0))
+        }
+        
+    }
+    
+    // 間違ったテスト
+    // 非同期処理完了前にテストが終了してしまう
+    // 失敗のアサーションなし=成功とみなされるので、意味ないテストになる。
+    func testEcho() {
+        Async().echo(message: "Hello") { message in
+            XCTAssertEqual(message, "Hello!!!")
+            XCTFail()
+        }
+    }
+    
+    func testEchoAsync() {
+        let exp: XCTestExpectation = expectation(description: "wait for finish")
+        Async().echo(message: "Hello") { message in
+            XCTAssertEqual(message, "Hello!!!")
+            exp.fulfill()
+        }
+        wait(for: [exp], timeout: 5)
+    }
+    
 }
