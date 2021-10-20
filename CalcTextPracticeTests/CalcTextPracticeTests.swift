@@ -111,4 +111,32 @@ final class DateFunctionsTests: XCTestCase {
         date = formatter.date(from: "2019/01/12")
         XCTAssertTrue(day.isHoliday(date: date))
     }
+    
+}
+
+
+struct MockDate: DateProtocol {
+    var date: Date? = nil
+    func now() -> Date {
+        return date!
+    }
+}
+
+final class CalenderUtilTests: XCTestCase {
+    func testIsHoliday() {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy/MM/dd"
+        
+        var mock = MockDate()
+        
+        // 日曜日
+        mock.date = formatter.date(from: "2019/01/07")
+        XCTAssertFalse(CalenderUtil(dateProtocol: mock).isHoliday())
+        // 金曜日
+        mock.date = formatter.date(from: "2019/01/11")
+        XCTAssertFalse(CalenderUtil(dateProtocol: mock).isHoliday())
+        // 土曜日
+        mock.date = formatter.date(from: "2019/01/12")
+        XCTAssertTrue(CalenderUtil(dateProtocol: mock).isHoliday())
+    }
 }
