@@ -80,3 +80,35 @@ final class CalcTextPracticeTests: XCTestCase {
     }
     
 }
+
+final class DateFunctionsTests: XCTestCase {
+    
+    var day: Day!
+    override func setUp() {
+        super.setUp()
+        self.day = Day()
+    }
+    
+    // 平日にしか動かさないこと前提で、平日の時falseを返すことを確認するテスト
+    // 休日動かすことがあった場合、trueが返ってきて失敗する
+    // 外部に依存したテスト
+    func testIsWorkdayBad() {
+        XCTAssertFalse(day.isHolidayBad())
+    }
+    
+    func  testIsHolidayGood() {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy/MM/dd"
+        
+        var date: Date!
+        // 月曜日 引数に与えることで、常に両パターンテストできてる
+        date = formatter.date(from: "2019/01/07")
+        XCTAssertFalse(day.isHoliday(date: date))
+        // 金曜日
+        date = formatter.date(from: "2019/01/11")
+        XCTAssertFalse(day.isHoliday(date: date))
+        // 土曜日
+        date = formatter.date(from: "2019/01/12")
+        XCTAssertTrue(day.isHoliday(date: date))
+    }
+}
