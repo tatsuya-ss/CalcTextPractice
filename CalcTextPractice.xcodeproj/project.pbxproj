@@ -158,14 +158,22 @@
 			path = GitHub;
 			sourceTree = "<group>";
 		};
-		75C0511E271F822400BCD30E /* TestModel */ = {
+		750CCFD42720D2C20090C733 /* Utilitity */ = {
 			isa = PBXGroup;
 			children = (
-				750CCFC92720CA630090C733 /* GitHub */,
 				75C0511F271F823500BCD30E /* Calculator.swift */,
 				75C05121271F824800BCD30E /* Cat.swift */,
 				75C05123271F825C00BCD30E /* Async.swift */,
 				75C05125271F82C000BCD30E /* Day.swift */,
+			);
+			path = Utilitity;
+			sourceTree = "<group>";
+		};
+		75C0511E271F822400BCD30E /* TestModel */ = {
+			isa = PBXGroup;
+			children = (
+				750CCFD42720D2C20090C733 /* Utilitity */,
+				750CCFC92720CA630090C733 /* GitHub */,
 			);
 			path = TestModel;
 			sourceTree = "<group>";
