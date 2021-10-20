@@ -16,6 +16,9 @@
 		750031C1271CD1B800971701 /* CalcTextPracticeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750031C0271CD1B800971701 /* CalcTextPracticeTests.swift */; };
 		750031CB271CD1B900971701 /* CalcTextPracticeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750031CA271CD1B900971701 /* CalcTextPracticeUITests.swift */; };
 		750031CD271CD1B900971701 /* CalcTextPracticeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750031CC271CD1B900971701 /* CalcTextPracticeUITestsLaunchTests.swift */; };
+		750CCFCB2720CA890090C733 /* GitHubRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750CCFCA2720CA890090C733 /* GitHubRepository.swift */; };
+		750CCFCD2720CAF10090C733 /* GitHubAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750CCFCC2720CAF10090C733 /* GitHubAPIClient.swift */; };
+		750CCFCF2720CCDB0090C733 /* GitHubRepositoryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750CCFCE2720CCDB0090C733 /* GitHubRepositoryManager.swift */; };
 		75C05120271F823500BCD30E /* Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C0511F271F823500BCD30E /* Calculator.swift */; };
 		75C05122271F824800BCD30E /* Cat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C05121271F824800BCD30E /* Cat.swift */; };
 		75C05124271F825C00BCD30E /* Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C05123271F825C00BCD30E /* Async.swift */; };
@@ -53,6 +56,9 @@
 		750031C6271CD1B900971701 /* CalcTextPracticeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalcTextPracticeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		750031CA271CD1B900971701 /* CalcTextPracticeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcTextPracticeUITests.swift; sourceTree = "<group>"; };
 		750031CC271CD1B900971701 /* CalcTextPracticeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcTextPracticeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		750CCFCA2720CA890090C733 /* GitHubRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubRepository.swift; sourceTree = "<group>"; };
+		750CCFCC2720CAF10090C733 /* GitHubAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubAPIClient.swift; sourceTree = "<group>"; };
+		750CCFCE2720CCDB0090C733 /* GitHubRepositoryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubRepositoryManager.swift; sourceTree = "<group>"; };
 		75C0511F271F823500BCD30E /* Calculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculator.swift; sourceTree = "<group>"; };
 		75C05121271F824800BCD30E /* Cat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cat.swift; sourceTree = "<group>"; };
 		75C05123271F825C00BCD30E /* Async.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Async.swift; sourceTree = "<group>"; };
@@ -136,9 +142,20 @@
 			path = CalcTextPracticeUITests;
 			sourceTree = "<group>";
 		};
+		750CCFC92720CA630090C733 /* GitHub */ = {
+			isa = PBXGroup;
+			children = (
+				750CCFCA2720CA890090C733 /* GitHubRepository.swift */,
+				750CCFCC2720CAF10090C733 /* GitHubAPIClient.swift */,
+				750CCFCE2720CCDB0090C733 /* GitHubRepositoryManager.swift */,
+			);
+			path = GitHub;
+			sourceTree = "<group>";
+		};
 		75C0511E271F822400BCD30E /* TestModel */ = {
 			isa = PBXGroup;
 			children = (
+				750CCFC92720CA630090C733 /* GitHub */,
 				75C0511F271F823500BCD30E /* Calculator.swift */,
 				75C05121271F824800BCD30E /* Cat.swift */,
 				75C05123271F825C00BCD30E /* Async.swift */,
@@ -282,9 +299,12 @@
 				750031AE271CD1B600971701 /* ViewController.swift in Sources */,
 				75C05120271F823500BCD30E /* Calculator.swift in Sources */,
 				75C05122271F824800BCD30E /* Cat.swift in Sources */,
+				750CCFCF2720CCDB0090C733 /* GitHubRepositoryManager.swift in Sources */,
+				750CCFCB2720CA890090C733 /* GitHubRepository.swift in Sources */,
 				750031AA271CD1B600971701 /* AppDelegate.swift in Sources */,
 				75C05124271F825C00BCD30E /* Async.swift in Sources */,
 				750031AC271CD1B600971701 /* SceneDelegate.swift in Sources */,
+				750CCFCD2720CAF10090C733 /* GitHubAPIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
