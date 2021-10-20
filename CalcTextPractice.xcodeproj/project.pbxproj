@@ -19,6 +19,8 @@
 		750CCFCB2720CA890090C733 /* GitHubRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750CCFCA2720CA890090C733 /* GitHubRepository.swift */; };
 		750CCFCD2720CAF10090C733 /* GitHubAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750CCFCC2720CAF10090C733 /* GitHubAPIClient.swift */; };
 		750CCFCF2720CCDB0090C733 /* GitHubRepositoryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750CCFCE2720CCDB0090C733 /* GitHubRepositoryManager.swift */; };
+		750CCFD22720D1180090C733 /* GitHubTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750CCFD02720D1180090C733 /* GitHubTableViewCell.swift */; };
+		750CCFD32720D1180090C733 /* GitHubTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 750CCFD12720D1180090C733 /* GitHubTableViewCell.xib */; };
 		75C05120271F823500BCD30E /* Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C0511F271F823500BCD30E /* Calculator.swift */; };
 		75C05122271F824800BCD30E /* Cat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C05121271F824800BCD30E /* Cat.swift */; };
 		75C05124271F825C00BCD30E /* Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C05123271F825C00BCD30E /* Async.swift */; };
@@ -59,6 +61,8 @@
 		750CCFCA2720CA890090C733 /* GitHubRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubRepository.swift; sourceTree = "<group>"; };
 		750CCFCC2720CAF10090C733 /* GitHubAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubAPIClient.swift; sourceTree = "<group>"; };
 		750CCFCE2720CCDB0090C733 /* GitHubRepositoryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubRepositoryManager.swift; sourceTree = "<group>"; };
+		750CCFD02720D1180090C733 /* GitHubTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubTableViewCell.swift; sourceTree = "<group>"; };
+		750CCFD12720D1180090C733 /* GitHubTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GitHubTableViewCell.xib; sourceTree = "<group>"; };
 		75C0511F271F823500BCD30E /* Calculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculator.swift; sourceTree = "<group>"; };
 		75C05121271F824800BCD30E /* Cat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cat.swift; sourceTree = "<group>"; };
 		75C05123271F825C00BCD30E /* Async.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Async.swift; sourceTree = "<group>"; };
@@ -121,6 +125,8 @@
 				750031B2271CD1B800971701 /* Assets.xcassets */,
 				750031B4271CD1B800971701 /* LaunchScreen.storyboard */,
 				750031B7271CD1B800971701 /* Info.plist */,
+				750CCFD02720D1180090C733 /* GitHubTableViewCell.swift */,
+				750CCFD12720D1180090C733 /* GitHubTableViewCell.xib */,
 			);
 			path = CalcTextPractice;
 			sourceTree = "<group>";
@@ -270,6 +276,7 @@
 			files = (
 				750031B6271CD1B800971701 /* LaunchScreen.storyboard in Resources */,
 				750031B3271CD1B800971701 /* Assets.xcassets in Resources */,
+				750CCFD32720D1180090C733 /* GitHubTableViewCell.xib in Resources */,
 				750031B1271CD1B600971701 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -298,6 +305,7 @@
 				75C05126271F82C000BCD30E /* Day.swift in Sources */,
 				750031AE271CD1B600971701 /* ViewController.swift in Sources */,
 				75C05120271F823500BCD30E /* Calculator.swift in Sources */,
+				750CCFD22720D1180090C733 /* GitHubTableViewCell.swift in Sources */,
 				75C05122271F824800BCD30E /* Cat.swift in Sources */,
 				750CCFCF2720CCDB0090C733 /* GitHubRepositoryManager.swift in Sources */,
 				750CCFCB2720CA890090C733 /* GitHubRepository.swift in Sources */,
