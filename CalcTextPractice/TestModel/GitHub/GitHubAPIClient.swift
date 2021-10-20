@@ -7,7 +7,12 @@
 
 import Foundation
 
-final class GitHubAPIClient {
+protocol GitHubAPIClientProtocol {
+    func fetchRepositories(user: String,
+                           handler: @escaping ([GitHubRepository]?) -> Void)
+}
+
+final class GitHubAPIClient: GitHubAPIClientProtocol {
     // ユーザ名を受け取り、そのユーザのリポジトリ一覧を取得する。
     func fetchRepositories(user: String,
                            handler: @escaping ([GitHubRepository]?) -> Void) {
