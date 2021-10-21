@@ -182,3 +182,10 @@ final class GitHubRepositoryManagerTests: XCTestCase {
     }
     
 }
+
+final class RandomExecutionTests: XCTestCase {
+    func testA() { }
+    func testB() { }
+    func testC() { }
+    func testD() { }
+}
