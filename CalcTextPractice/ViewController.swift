@@ -17,7 +17,7 @@ final class ViewController: UIViewController {
         super.viewDidLoad()
         
         setupTableView()
-        self.manager = GitHubRepositoryManager()
+        self.manager = GitHubRepositoryManager(client: GitHubAPIClient())
         self.manager.load(user: "apple") { [weak self] in
             self?.tableView?.reloadData()
         }

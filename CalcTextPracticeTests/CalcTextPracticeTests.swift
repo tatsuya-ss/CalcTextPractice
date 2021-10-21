@@ -140,3 +140,45 @@ final class CalenderUtilTests: XCTestCase {
         XCTAssertTrue(CalenderUtil(dateProtocol: mock).isHoliday())
     }
 }
+
+final class MockGitHubAPIClient: GitHubAPIClientProtocol {
+    
+    var returnRepositories: [GitHubRepository] // 返却するリポジトリ一覧を保持
+    var argsUser: String? // 呼び出された引数の記録
+    
+    init(repositories: [GitHubRepository]) {
+        self.returnRepositories = repositories
+    }
+    
+    func fetchRepositories(user: String,
+                           handler: @escaping ([GitHubRepository]?) -> Void) {
+        self.argsUser = user
+        handler(self.returnRepositories)
+    }
+    
+}
+
+final class GitHubRepositoryManagerTests: XCTestCase {
+    
+    func testMajorRepositories() {
+        
+        let testRepositories: [GitHubRepository] = [
+            GitHubRepository(id: 0, star: 9, name: ""),
+            GitHubRepository(id: 1, star: 10, name: ""),
+            GitHubRepository(id: 2, star: 11, name: "")
+        ]
+        
+        let mockClient = MockGitHubAPIClient(repositories: testRepositories)
+        
+        let manager = GitHubRepositoryManager(client: mockClient)
+
+        manager.load(user: "apple") {
+            XCTAssertEqual(mockClient.argsUser, "apple")
+            
+            XCTAssertEqual(manager.majorRepositories.count, 2)
+            XCTAssertEqual(manager.majorRepositories[0].id, 1)
+            XCTAssertEqual(manager.majorRepositories[1].id, 2)
+        }
+    }
+    
+}
