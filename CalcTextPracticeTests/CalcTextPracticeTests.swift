@@ -189,3 +189,17 @@ final class RandomExecutionTests: XCTestCase {
     func testC() { }
     func testD() { }
 }
+
+final class IsPositiveTests: XCTestCase {
+    var positive: Positive!
+    override func setUp() {
+        self.positive = Positive()
+    }
+    
+    func testIsPositive() {
+        XCTAssertTrue(positive.isPositive(x: 0))
+        XCTAssertTrue(positive.isPositive(x: 1))
+        XCTAssertTrue(positive.isPositiveOr(x: 0))
+        XCTAssertTrue(positive.isPositiveOr(x: 1))
+    }
+}
