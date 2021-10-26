@@ -6,6 +6,8 @@
 //
 
 import XCTest
+import Quick
+import Nimble
 @testable import CalcTextPractice
 
 final class CalcTextPracticeTests: XCTestCase {
@@ -171,7 +173,7 @@ final class GitHubRepositoryManagerTests: XCTestCase {
         let mockClient = MockGitHubAPIClient(repositories: testRepositories)
         
         let manager = GitHubRepositoryManager(client: mockClient)
-
+        
         manager.load(user: "apple") {
             XCTAssertEqual(mockClient.argsUser, "apple")
             
@@ -202,4 +204,44 @@ final class IsPositiveTests: XCTestCase {
         XCTAssertTrue(positive.isPositiveOr(x: 0))
         XCTAssertTrue(positive.isPositiveOr(x: 1))
     }
+}
+
+final class QuickCalculatorTests: QuickSpec {
+    
+    override func spec() {
+        
+        var calc: Calculator!
+        
+        beforeEach {
+            calc = Calculator()
+        }
+        
+        describe("add()") {
+            it("1+2=3") {
+                expect(calc.add(x:1, y:2)).to(equal(3))
+            }
+        }
+        
+        describe("subtract") {
+            it("3-1=2") {
+                expect(calc.subtract(x: 3, y:1)).to(equal(2))
+            }
+        }
+        
+        describe("division") {
+            context("6/2") {
+                it("return 3") {
+                    expect(calc.division(x: 6, y:2)).to(equal(3))
+                }
+            }
+            
+            context("6/0") {
+                it("return nil") {
+                    expect(calc.safeDivision(x: 3, y: 0)).to(beNil())
+                }
+            }
+        }
+    }
+    
+    
 }
